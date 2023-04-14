@@ -53,3 +53,16 @@ const student = {
 }
 
 console.log(loginUser(student));
+
+function first () {
+    const x = 200;
+
+    function second () {
+        const y = 300;
+        console.log(x + y);
+    }
+
+    second();
+}
+
+first();
