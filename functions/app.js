@@ -1,3 +1,4 @@
+//Function declarations (the regular functions)
 function greetings() {
     console.log('Hello world');
 }
@@ -25,6 +26,8 @@ function multiplication (num1, num2) {
 }
 
 const multResults = multiplication (5, 6);
+
+console.log(multResults);
 
 function user (name) {
     return name + 'is a registered user';
@@ -54,6 +57,8 @@ const student = {
 
 console.log(loginUser(student));
 
+//nested functions
+
 function first () {
     const x = 200;
 
@@ -66,3 +71,13 @@ function first () {
 }
 
 first();
+
+//function expression - basically express a function as a variable 
+
+const addDollarSign = function (value) {
+    return '$' + value;
+};
+
+console.log (addDollarSign(454));
+
+
