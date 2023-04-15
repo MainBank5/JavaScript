@@ -2,7 +2,7 @@
 function greetings() {
     console.log('Hello world');
 }
-
+ 
 greetings();
 
 function add (num1 , num2) {
