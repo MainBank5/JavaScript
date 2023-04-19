@@ -130,3 +130,64 @@ numbers.forEach((n) => console.log(n));
 
 //the last parenthesis are for invoking the function()
 
+(function () {
+    const salute = 'Hello world';
+    console.log(salute);
+})();
+
+//if you were to add parameters,you have to provide the arguments at the last parameter that invoke the functions
+
+( function (fName) {
+    console.log('Hello ' + fName);
+})('Sean');
+
+
+//function exercises 
+//create a func that getcelcius that takes temp in fareinheit and returns in celcius. Bonus: write as one line func
+
+//solution 1 - regular function simple
+
+/*function getCelcius (fareinheit) {
+    return (fareinheit - 32) * 5 / 9;
+}
+
+console.log(getCelcius(32)); */
+
+const getCelcius = (fareinheit) => (fareinheit - 32) * 5 / 9;
+console.log(getCelcius(32));
+
+(function (fareinheit) {
+    console.log((fareinheit -32) * 5 /9);
+})(32)
+
+//challenge 2
+
+//create an arrow function minMax that takes an array of numbers and returns an object with minimum
+//and maximum numbers in this array 
+
+function minMax(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    //console.log(max);//
+    return {
+        min, max
+    }
+}
+
+console.log(minMax([1, 2, 3, 4, 5,6]));
+
+//challenge 3 
+//create an IIFE that takes the length & width of a rectangle outputs its
+//into the console as a message 
+
+//( function (l, w){
+    //const area = l * w;//
+    //console.log('The length of the rectangle is ' + l + ' and the width is ' + w + 'and the area is ' + area);
+//})(10, 5)//
+
+
+
+((l, w) => {
+    const area = l * w;
+    console.log('The length of the rectangle is ' + l + ' and the width is ' + w + ' and the area is ' + area);
+})(15, 6);
