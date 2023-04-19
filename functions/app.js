@@ -80,4 +80,20 @@ const addDollarSign = function (value) {
 
 console.log (addDollarSign(454));
 
+// arrow fubnctions - lets rewrite this as an arrow function 
+function exa (r, s) {
+    return r + s;
+}
 
+console.log (exa(5, 23));
+
+const arr = (r ,s) => {
+    return r * s;
+};
+
+console.log (arr(23, 5));
+
+//shorthand => means return so we can simplify as follows 
+
+const sub = (t, v) => t - v;
+console.log(sub(100, 10));
