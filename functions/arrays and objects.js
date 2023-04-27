@@ -81,6 +81,13 @@ console.log(guru.slice(1, 4), guru);
 
 console.log(guru.splice(3, 1), guru);
 
+//you can use splice to add elements
+const names = ["Banana", "Orange", "Apple", "Mango"];
+names.splice(2, 0, "Lemon", "Kiwi"); //2 defines the index from where new element will be added, 0 defines
+//how many items will be removed from the position after adding the new ones
+
+console.log(names); 
+
 //using multiple methods 
 
 const valie = [20, 33, 44, 56, 69, 78];
@@ -113,7 +120,13 @@ const metals = ['silver', 'gold', 'mercury', 'sodium'];
 const gases = ['argon', 'neon', 'oxygen', 'carbon']
 
 //concat method
-c = metals.concat(gases);
+let yok = metals.concat(gases);
+
+console.log(yok);
+
+const arr1 = ["Emil", "Tobias", "Linus"];
+const myChildrn = arr1.concat('Timothy');
+console.log(myChildrn)
 
 //spread operator for concatenation 
 
@@ -130,15 +143,31 @@ let g = count.flat();
 
 console.log(g);
 
-//static methods on array object
+
 
 const testing = [40, 30, 50, 60, 70];
 
+let get = testing.toString();
+console.log(get);
+//static methods on array object
 g = Array.isArray(testing);
 g = Array.isArray('Hello');
 console.log(g);
 
-//conver to array
+//convert to array 
 
-g = Array.from('1234567');
+g = Array.from([1,2,3,45,67]);
 console.log(g);
+
+console.log(Array.from('foool'))
+
+//create an array from a set of values/variables
+
+const bob = 1;
+const alice = 2;
+const Tyler = 3;
+
+let q = Array.of(bob, alice, Tyler);
+
+console.log(q);
+
