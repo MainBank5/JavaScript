@@ -73,5 +73,72 @@ const guru = [34, 55, 95, 20, 15];
 // the slice method doesnt permanently change/cut the array unlike splice method
 console.log(guru.slice(1, 4), guru);
 
+//splice method cuts the array from the specied index up to the range 
+//this method cuts the array permanently
+/*console.log(guru.splice(1, 4), guru);*/
 
+//you can use splice to remove a specific element
 
+console.log(guru.splice(3, 1), guru);
+
+//using multiple methods 
+
+const valie = [20, 33, 44, 56, 69, 78];
+console.log(valie.splice(1,4).reverse().toString().charAt(1));
+
+//charat is for strings and it returns the character at the specified index
+
+//Nesting arrays
+let p;
+
+const transport = ['car', 'bike', 'ship', 'plane'];
+const road = ['walk', 'run', 'bus'];
+//nesting arrays using push
+transport.push(road);
+
+console.log(transport)
+//retrieving a certain element from a concatenated array
+p = transport[4] [1];
+console.log(p);
+//nesting array - note the differance in indexing when using this concatenation method
+const allTypes = [transport, road];
+console.log(allTypes);
+
+let f = allTypes[1] [2]
+console.log(f);
+
+//concatenation of array to become one array
+let c; 
+const metals = ['silver', 'gold', 'mercury', 'sodium'];
+const gases = ['argon', 'neon', 'oxygen', 'carbon']
+
+//concat method
+c = metals.concat(gases);
+
+//spread operator for concatenation 
+
+c = [...metals, ...gases];
+
+console.log(c);
+
+//flatten an operator 
+
+const count = [1, 2, [3, 4, 5], 6, 7, [8, 9], 10, 11]
+console.log(count);
+
+let g = count.flat();
+
+console.log(g);
+
+//static methods on array object
+
+const testing = [40, 30, 50, 60, 70];
+
+g = Array.isArray(testing);
+g = Array.isArray('Hello');
+console.log(g);
+
+//conver to array
+
+g = Array.from('1234567');
+console.log(g);
