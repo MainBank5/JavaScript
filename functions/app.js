@@ -73,6 +73,7 @@ function first () {
 first();
 
 //function expression - basically express a function as a variable 
+//Notice the lack of function name, we've saved it to a variable. This is what makes it anonymous.
 
 const addDollarSign = function (value) {
     return '$' + value;
@@ -191,3 +192,36 @@ console.log(minMax([1, 2, 3, 4, 5,6]));
     const area = l * w;
     console.log('The length of the rectangle is ' + l + ' and the width is ' + w + ' and the area is ' + area);
 })(15, 6);
+
+
+//functions overview 
+//regular function declaration (simple functions)
+function message (newUser) {
+    console.log('Welcome ' + newUser + ' to the chat room');
+}
+
+message('Derrick');
+
+//function expressions 
+
+const area = function (length, width) {
+    return length * width;
+};
+
+console.log(area(50, 30));
+
+//arrow functions
+
+const perimeter = (len, wid) => len + wid;
+console.log(perimeter(70, 60));
+
+//IIFE -  avoid global scope pollution
+
+(function area (length, width){
+    const area = length * width;
+    console.log(area);
+})(8, 6);
+
+
+
+
