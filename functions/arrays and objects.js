@@ -171,3 +171,16 @@ let q = Array.of(bob, alice, Tyler);
 
 console.log(q);
 
+//objects 
+let tol;
+const person = {
+    name: 'John Doe',
+    age: 30,
+    isAdmin:false,
+    address: '123 Main St',
+};
+
+tol = person.name;
+tol = person['age'];
+
+console.log(tol);
