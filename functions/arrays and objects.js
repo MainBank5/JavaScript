@@ -177,10 +177,175 @@ const person = {
     name: 'John Doe',
     age: 30,
     isAdmin:false,
-    address: '123 Main St',
+    address: {
+        street: '123 Main St',
+        city: 'New York',
+        state: 'NY'
+    },
+    hobbies: ['music', 'baseball']
 };
 
+//accessing properties
 tol = person.name;
 tol = person['age'];
 
 console.log(tol);
+
+console.log(person.address.city);
+
+console.log(person.hobbies[1]);
+
+//mutating/changing properties
+
+person.name = 'jane Doe'
+person['isAdmin'] = true
+
+delete person.age;
+
+person.hasChildren = true;
+
+tol = person;
+
+console.log(person)
+
+person.warmups = function () {
+    console.log(`Hello, my name is ${person.name}`);
+};
+
+person.warmups();
+
+//creating objects - think of creating an empty varaible then addding items/value
+const todo = {};
+todo.name = 'Learn JavaScript';
+todo.description = 'Learn JScript objects';
+
+let pooh = todo;
+
+console.log(pooh);
+
+//using constructor 
+
+const task = new Object ()
+task.goal = 'Learn JavaScript';
+task.habit = 'Learn JScript objects';
+
+let lot = task;
+console.log(task);
+
+//accessing values using [] brackets is ideal for two strings as such;
+const person2 = {
+    'first name': 'jane',
+    'last name': 'Doe',
+}
+
+let sop = person2['first name'];
+console.log(sop);
+
+//nesting objects 
+
+const person3 = {
+    address: {
+        coord: {
+            lat: '37.78',
+            lng: '-122.41'
+
+        }
+    }
+}
+
+let jav;
+jav = person3.address.coord.lat;
+console.log(jav);
+
+//spread operator on objects 
+
+const obj1 = {
+     a: 1, 
+     b: 2
+    };
+const obj2 = {
+     c: 3,
+     d: 4
+    };
+
+const obj3 = {...obj1, ...obj2};
+x = obj3;
+console.log(x);
+
+//alternatively
+const obj4 = Object.assign({}, obj1, obj2);
+x = obj4;
+console.log(x);
+
+const todos = [
+    {id: 1, name: 'buy milk'},
+    {id: 2, name: 'buy eggs'},
+    {id: 3, name: 'buy bread'}
+];
+
+todos.push({id: 4, name: 'buy flour'});
+console.log(todos)
+
+x = todos[3].name;
+console.log(x);
+
+//if you want to put the keys or values into an array
+
+x = Object.values(person);
+console.log(x);
+
+//to get the length of an object
+x = Object.keys(person).length;
+console.log(x);
+
+//an array of key:value pairs or convert all of them to array
+
+x = Object.entries(todo);
+console.log(x);
+
+//check if a certain property is in an object
+const person4 = {
+    name: 'Will Smith', 
+    age: 56,
+    city: 'Boston'
+}
+x = person4.hasOwnProperty('city');
+console.log(x);
+
+//shorthand naming assume you have the following variables
+const mentor = 'John Smith';
+const mentee = 'Eliud Karuga';
+const combinedAge = 56;
+
+const mentorship = {
+    mentor,
+    mentee,
+    combinedAge,
+}
+
+console.log(mentorship);
+
+//destructuring - if you want to extract a certain property from object and put it into variable 
+//you could do something like this
+
+const program = {
+    title: 'wash',
+    description: 'clean the house',
+    cost: 1000,
+    activities: {
+        level: 1,
+        medium: 'programming'
+    }
+};
+
+const title = program.title;
+console.log(title);
+
+//alternatively you can easily destruct this way(Nb: I cannot redecalre title again - for your const variable use the names in the object)
+const { description } = program;
+
+console.log( description);
+
+const {activities:{medium}} = program;
+console.log(medium);
+
