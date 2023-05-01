@@ -341,7 +341,7 @@ const program = {
 const title = program.title;
 console.log(title);
 
-//alternatively you can easily destruct this way(Nb: I cannot redecalre title again - for your const variable use the names in the object)
+//alternatively you can easily destruct this way(Nb: I cannot redeclare title again - for your const variable use the names in the object)
 const { description } = program;
 
 console.log( description);
@@ -349,3 +349,161 @@ console.log( description);
 const {activities:{medium}} = program;
 console.log(medium);
 
+//renaming a key 
+const object1 = {
+    stri: 'somestring',
+    nub: 42,
+    boo: false
+  };
+
+const {stri:myRename, nub, boo} =object1;
+
+console.log(myRename);
+
+//destructure arrays and using ...rest
+
+const numberz = [23, 67, 49, 80, 75];
+
+const [firzt, second, ...rest] = numberz;
+console.log( firzt, second, rest);
+
+//convert to JSON - JSON is basically object literals with double strings on keys and values
+
+const post = {
+    id: 1,
+    title: 'Post One', 
+    body: 'My body',
+};
+//when use fetch api library it automaitcally converts for you. But here's how you can convert
+const str = JSON.stringify(post);
+console.log(str)
+
+//to convert it back to our initial object literal 
+const obj = JSON.parse(str)
+console.log(obj);
+
+//it also works on parent array with objects 
+const posts = [{
+    id: 1,
+    title: 'Post One', 
+    body: 'My body',
+},
+
+{
+    id: 2,
+    title: 'Post two', 
+    body: 'My body',
+},
+
+];
+
+const str2 = JSON.stringify(posts);
+console.log(str2);
+
+//object challenge 
+//create an array of objects called library. add 3 objects with property of author, title, status
+//title and author should be string and status should be another object with properties own, reading, read
+//which should be boolean. set own to true and read, reading to false 
+
+const library = [
+    {
+        author:'Stephen King',
+        title:'Beauty and the Best',
+        status: {
+            own:true,
+            reading:false,
+            read:false,
+        }
+    },
+
+    {
+        author:'Oprah Winfrey',
+        title:'The Interview',
+        status: {
+            own:true,
+            reading:false,
+            read:false,
+        }
+    },
+
+    {
+        author:'Margret Ogola',
+        title:'The River and the Source',
+        status: {
+            own:true,
+            reading:false,
+            read:false,
+        }
+    }
+
+]
+
+//you finished reading all of them, change the read status to true 
+
+library[0].status.read = true;
+library[1].status.read = true;
+library[2].status.read = true;
+
+console.log(library);
+
+//Destructure the title from the first book and rename the variable to `firstBook`
+
+const {title:firstBook} = library[0];
+console.log(firstBook);
+
+//Turn the library object into a JSON string
+
+const file = JSON.stringify(library);
+console.log(file);
+
+
+
+
+//dates are objects 
+const dol = new Date;
+console.log(dol);
+
+//create date with a specied date and time
+const led = new Date(2016,4,24,12,23,45)
+console.log(led);
+
+//to convertt to a more readable format
+
+const d = new Date();
+let yu = d.toDateString();
+console.log(yu)
+
+//to a different timezone
+
+let yus = d.toUTCString();
+console.log(yus)
+
+//gethours, getminutes, getfullyear
+yu = d.getFullYear()
+console.log(yu)
+
+yu = d.getMinutes();
+console.log(yu);
+
+//getDay returns weekdays(from 0 to 6)
+yu = d.getDay();
+console.log(yu);
+//Get month as a number (0-11)
+yu = d.getMonth();
+console.log(yu);
+
+//getUTCDate Returns the UTC date
+yu = d.getUTCDate();
+console.log(yu);
+
+//SetDate methods let you set date value
+
+const w = new Date();
+
+console.log(w.setFullYear(2020))
+
+const non = new Date('August 19, 1975 23:15:30');
+
+non.setFullYear(1969);
+
+console.log(non.getFullYear());
