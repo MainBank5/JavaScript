@@ -105,3 +105,150 @@ else {
         console.log("Go to sleep")
     }
 }
+
+//switches 
+//switch(expression) {
+  //case x:
+    // code block
+    //break;
+  //case y:
+    // code block
+   // break;
+  //default:
+    // code block
+//}
+
+
+const dc = new Date(2021, 6, 22, 13, 28);
+const month = dc.getMonth();
+
+switch (month) {
+    case 9:
+        console.log("its October, My bday month");
+        break;
+    case 10:
+        console.log("Its November");
+        break;
+    case 11:
+        console.log("its December");
+        break;
+        default:
+            console.log("Its mid-year");
+}
+
+switch (new Date().getDay()) {
+    case 0:
+        console.log("Sunday");
+        break;
+    
+    case 1:
+        console.log("Monday");
+        break;
+    
+    case 2:
+        console.log("Tuesday");
+        break;
+    
+    case 3:
+        console.log("Wensday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    
+}
+
+//The default keyword specifies the code to run if there is no case match. 
+//It does not have to be the last case in a switch block: if it appears as the first case, remember to add break
+
+switch (new Date().getDay) {
+    default:
+        console.log("Looking forward to the weekend");
+    break;
+    case 6:
+        console.log("Its Saturday, Yay");
+        break;
+    case 0:
+        console.log("Today is Sunday")
+
+}
+
+//different switch cases can share the code 
+switch (new Date().getDay()) {
+    case 4:
+    case 5:
+      console.log("Friday is coming");
+      break;
+    case 0:
+    case 6:
+      console.log("It is Weekend");
+      break;
+    default:
+      console.log("Looking forward to the Weekend");
+  }
+
+//Switch cases relies on strict comparison (===).
+//the values must be equal and of the same data type for the switch to work
+
+let pol = "0";
+
+switch (pol) {
+    case 0:
+        console.log("They're the same");
+        break;
+    case 1:
+        console.log("This is the one");
+        break;
+    default:
+        console.log("no value was found")
+}
+
+//using ranges in switch - reference to the hour const above
+
+switch (true) {
+    case hour < 12:
+        console.log("It is before noon");
+        break;
+    case hour < 18:
+        console.log("Its afternoon");
+        break;
+    default:
+        console.log("Tuck youself in");
+
+}
+//If multiple cases matches a case value, the first case is selected.
+
+
+//calculator challenge
+
+function calculator (num1, num2, operator) {
+    let result;
+
+    switch (operator) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            result = num1 / num2;
+            break;
+        default:
+            result = "Invalid operator";
+    }
+
+    console.log(result);
+    return result;
+}
+
+calculator(25, 5, '$');
