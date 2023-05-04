@@ -79,6 +79,29 @@ if (hour == 6 && hour < 15) {
     console.log('Its work time')
 }
 // or || one condition has to be true 
-if (hour == 6 || hour == 20) {
+if (hour === 6 || hour === 20) {
     console.log('brush your teeth');
+}
+
+const k = new Date(2020, 4, 5, 10, 41);
+const time = k.getHours();
+
+//my own ifs. the first logic is always executed first 
+
+if (time < 12) {
+    console.log("Wake up Morning!");
+    if (time === 10 || hour === 11) {
+        console.log("its almost midday")
+    }
+} else if (time < 18 ) {
+    console.log("its aftertoon");
+    if (time == 15) {
+        console.log("get a snack");
+    }
+}
+else {
+    console.log("Good evening");
+    if (time >= 21 ) {
+        console.log("Go to sleep")
+    }
 }
