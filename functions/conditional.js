@@ -252,3 +252,66 @@ function calculator (num1, num2, operator) {
 }
 
 calculator(25, 5, '$');
+
+//truthy and falsy
+//falsy values 
+// - false
+// - 0
+// - empty string '' or ""
+// - NaN
+// - null
+// - undefined
+
+// this is used in form validation. when the input is false(nothing filled) when the input is true(filled with a certain value)
+
+const him = '';
+
+if (him) {
+    console.log("This is truthy");
+} else {
+    console.log("This is falsy");
+}
+
+console.log(Boolean(him));
+
+//truthy values 
+//anything else that's not a falsy value
+// - true
+// - '0' string (0 in a string)
+// - space in a empty string 
+// - 'false' name false in a string 
+// - [] an empty array
+// - {} an empty object
+// - function () {} an empty function 
+
+
+//now assume users are filling this form. if they select 0 kids they'll be asked to fill the number of kids
+//they have since 0 is falsy. but you can't force every user to fill the number of kids even if they dont have.
+// to avoid this you can do as follows:
+const kids = 0;
+
+if (kids !== undefined) {
+    console.log(`You have ${kids} kids`);
+} else {
+    console.log('Plese enter number of kids');
+}
+
+//empty arrays are truthy. 
+
+const piece = ['piece one'];
+
+if (piece.length > 0) {
+    console.log("list posts");
+} else {
+    console.log('no post to list')
+}
+
+//empty objects are truthy 
+
+const profile = { home: "kiambu"};
+
+if (Object.keys(profile).length > 0) {
+    console.log("list user")
+} else {
+    console.log("No user")
+}
