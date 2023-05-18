@@ -315,3 +315,29 @@ if (Object.keys(profile).length > 0) {
 } else {
     console.log("No user")
 }
+
+// && - returns the first falsy value or the last value
+
+let kay;
+
+kay = 10 && 20 && 30;
+
+kay = 10 && NaN && 70 && 90
+
+console.log(kay);
+
+
+// use case - for example displaying blog posts 
+
+const blogs = ['Post one', 'Post two'];
+// if blogs is empty
+if (blogs.length === 0) {
+    console.log('no blog posts')
+    } 
+    
+else {
+        console.log('list blog posts')
+}
+
+
+blogs.length > 0 && console.log(blogs[0]);
