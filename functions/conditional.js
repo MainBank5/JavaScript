@@ -296,6 +296,8 @@ if (kids !== undefined) {
     console.log('Plese enter number of kids');
 }
 
+console.log(Boolean(kids))
+
 //empty arrays are truthy. 
 
 const piece = ['piece one'];
@@ -341,3 +343,19 @@ else {
 
 
 blogs.length > 0 && console.log(blogs[0]);
+
+// || - returns first truthy value or the last value 
+
+let back; 
+//back = 10 || 96 || 70 || 90;
+back = 0 || null || ''
+console.log(back);
+
+// ?? returns the right side value if the left side value is strictly either null / undefined( other falsy values will be retuned since they're not null/undefined)
+//by default it returns the first value 
+let kite; 
+kite = 5 ?? 6;
+console.log(kite);
+
+let cat = null ?? 20;
+console.log(cat);

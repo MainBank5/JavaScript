@@ -187,7 +187,7 @@ const person = {
 
 //accessing properties
 tol = person.name;
-tol = person['age'];
+//tol = person['age'];
 
 console.log(tol);
 
