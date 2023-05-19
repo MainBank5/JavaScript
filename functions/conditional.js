@@ -375,3 +375,30 @@ age >= 18 ? console.log('Yes, You can vote') : console.log("No, you can't vote")
 const voting = age >= 18 ? 'You have the right to vote' : `You're not eligible to vote`;
 
 console.log(voting);
+
+//multiple statements 
+const auth = true; 
+let redirect;
+
+/*if (auth) {
+   alert("Welcome to the dashboard");
+   redirect = '/dashboard'
+} else {
+    alert('Access Denied!!');
+    redirect = "/please login";
+}
+
+console.log(redirect);*/
+
+//shorthand 
+const redirect2 = auth ? (alert("Welcome to your dashboard"), '/dashboard') : (alert('acccess denied'), '/login');
+
+console.log(redirect2)
+
+
+//if you only have one condition hence no need for else you can end with null 
+
+auth ? console.log("user welcome") :null;
+//alternatively
+auth && console.log("Welcome user");
+
