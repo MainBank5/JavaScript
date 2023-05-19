@@ -359,3 +359,19 @@ console.log(kite);
 
 let cat = null ?? 20;
 console.log(cat);
+
+//ternafy ioperator 
+
+const age = 14;
+
+if (age >= 18) {
+    console.log("You can vote")
+} else {
+    console.log("You can't vote")
+}
+// the ? can be assumed/read to stand for if and : else
+age >= 18 ? console.log('Yes, You can vote') : console.log("No, you can't vote");
+
+const voting = age >= 18 ? 'You have the right to vote' : `You're not eligible to vote`;
+
+console.log(voting);
