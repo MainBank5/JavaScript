@@ -436,11 +436,23 @@ for (let i = 0; i < clients.length; i++) {
 }
 
 //breaking and continue 
-for (let i = 0; i <= 10; i++) {
+
+//break
+/*for (let i = 0; i <= 10; i++) {
     if (i ===7 ) {
         break;
     } else {
         console.log("number " + i);
     }
 
+}*/
+
+//continue 
+
+for (let i = 0; i <= 20; i++) {
+    if ( i === 13) {
+        console.log('Skippping the 13...')
+        continue;
+    }
+    console.log(i)
 }
