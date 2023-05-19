@@ -391,9 +391,9 @@ let redirect;
 console.log(redirect);*/
 
 //shorthand 
-const redirect2 = auth ? (alert("Welcome to your dashboard"), '/dashboard') : (alert('acccess denied'), '/login');
+//const redirect2 = auth ? (alert("Welcome to your dashboard"), '/dashboard') : (alert('acccess denied'), '/login');
 
-console.log(redirect2)
+//console.log(redirect2)
 
 
 //if you only have one condition hence no need for else you can end with null 
@@ -402,3 +402,45 @@ auth ? console.log("user welcome") :null;
 //alternatively
 auth && console.log("Welcome user");
 
+//loops 
+
+//for ([initial expression], [condition expression], [Incremental Expression])
+
+for (let i = 0; i <= 10; i++) {
+    if (i ===7 ) {
+        console.log('7 is my lucky number')
+    } else {console.log("Number " + i);
+}
+}
+
+//nested loops 
+
+for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= 10; j++) {
+        if (i + j === 7) {
+            console.log('7 is my lucky number')
+            } else {console.log("Number " + i + j);
+            }
+}
+}
+
+//looping through arrrays 
+
+const clients = ['Brad', 'Sam', 'John', 'Eliud', 'Liam'];
+
+for (let i = 0; i < clients.length; i++) {
+    if (i === 2) {
+        console.log('Hello ' + clients[i])
+    } else {console.log(clients[i]);
+}
+}
+
+//breaking and continue 
+for (let i = 0; i <= 10; i++) {
+    if (i ===7 ) {
+        break;
+    } else {
+        console.log("number " + i);
+    }
+
+}
