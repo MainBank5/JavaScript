@@ -449,10 +449,95 @@ for (let i = 0; i < clients.length; i++) {
 
 //continue 
 
-for (let i = 0; i <= 20; i++) {
+for (let i = 1; i <= 20; i++) {
     if ( i === 13) {
         console.log('Skippping the 13...')
         continue;
     }
     console.log(i)
 }
+
+//the while loop 
+let i = 0
+/*
+
+while (i <= 15) {
+    console.log('Numbre ' + i)
+    i++;
+}*/
+
+const array = [10, 20, 30, 40, 50]; 
+
+while (i < array.length) {
+    console.log(array[i]);
+    i++;
+}
+
+//nesting while loops 
+let j = 0
+while (j < array.length) {
+    let k = 0
+    while (k < array.length) {
+        console.log(array[j] + ' ' + array[k])
+        k++;
+    }
+    j++;
+}
+
+
+/*do {
+    // code block to be executed
+  }
+  while (condition);
+*/
+
+// the thing with While loops is that uit runs even when the condition isnt true
+let h = 10;
+do {
+    console.log("Number " + h);
+    h++;
+}
+while (h <= 15)
+
+//fizzBizz challenge 
+/*Print/log the numbers from 1 to 100
+- For **multiples of three** print "Fizz" instead of the number
+- For **multiples of five** print "Buzz"
+- For numbers which are **multiples of both three and five** print "FizzBuzz"
+*/
+
+for ( let r = 0; r <= 100; r++) {
+    if ( r % 3 === 0 & r % 5 ===0 ) {
+        console.log('FizzBuzz')
+    } else if ( r % 3 === 0) {
+        console.log('Fizz')
+    } else if ( r % 5 === 0) {
+            console.log('Buzz')
+        } else {
+    
+    console.log(r)
+                
+    }
+}
+
+//using while loop 
+
+let rt = 1;
+
+while (rt <= 100) {
+
+    if (rt % 3 ===0 && rt % 5 === 0 ) {
+        console.log('FizzBuzz')
+    } else if (rt % 3 === 0) {
+        console.log('Fizz')
+    } else if ( rt % 5 === 0) {
+        console.log('Buzz')
+    } else{
+        console.log(rt)
+    }
+    rt++;
+}
+
+//for of loops 
+const items = ['milk', 'yoghurt', 'oats', 'sugar']
+
