@@ -507,7 +507,7 @@ while (h <= 15)
 */
 
 for ( let r = 0; r <= 100; r++) {
-    if ( r % 3 === 0 & r % 5 ===0 ) {
+    if ( r % 3 === 0 && r % 5 ===0 ) {
         console.log('FizzBuzz')
     } else if ( r % 3 === 0) {
         console.log('Fizz')
@@ -539,5 +539,55 @@ while (rt <= 100) {
 }
 
 //for of loops 
-const items = ['milk', 'yoghurt', 'oats', 'sugar']
+const items = ['milk', 'yoghurt', 'oats', 'sugar', 'tea'];
 
+for (let i = 0; i <= items.length; i++) {
+    console.log(items[i]);
+}
+
+let lik = 0;
+
+while (lik <= items.length) {
+    if (lik === 2) {
+        console.log('Eat ' + items[2])
+    } else{
+       console.log(items[lik]); 
+    }
+    lik++;
+}
+
+//cleaner way looping array using for of loops 
+
+const goods = ['salt', 'table', 'plant', 'vase', 'toys']; 
+
+for (const good of goods) {
+    console.log(good);
+}
+
+//cleaner way looping objects in an array using for of loops
+const animals = [{name: 'dog',age: 2}, {name: 'cat',age: 3} ]
+
+for (const animal of animals) {console.log(animal.name); 
+    console.log(animal.age);
+}
+
+//loop over a string 
+let syntax = 'JavaScript'; 
+for (letter of syntax) {
+    console.log(letter)
+}
+
+//maps
+const map = new Map();
+map.set('name', 'John');
+map.set('age', 32);
+map.set('job', 'developer');
+for (const [key, value] of map) {
+    console.log(key, value);
+}
+    
+//for in statement loops through the properties of an Object:
+
+const students = {model: 'Ducatti', age: 1990};
+for (const key in students) {
+    console.log(key, students[key])}
