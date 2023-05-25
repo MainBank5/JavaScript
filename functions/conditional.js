@@ -590,4 +590,36 @@ for (const [key, value] of map) {
 
 const students = {model: 'Ducatti', age: 1990};
 for (const key in students) {
-    console.log(key, students[key])}
+    console.log(key, students[key])
+}
+
+//for in arrays
+const colors = ['pink', 'purple', 'blue', 'yellow', 'white', 'black'];
+for (const key in colors) {
+    console.log(colors[key]);
+};
+
+// .foreach method - it calls a function for each element 
+//the paramater is the name assigned to each element of the array
+const socials = ['Facebook', 'Twitter', 'Instagram', 'Snapchat', 'Pinterest'];
+socials.forEach(function (item) {
+    console.log(item);
+});
+
+// remember how we used the arrrow function
+const style = ['old', 'new', 'modern', 'ancient']; 
+style.forEach((styles) => console.log(styles));
+//the complete syntax for this foreach method is 
+//array.forEach(function(currentValue, index, arr))
+const watches = ['Rolex', 'Patek', 'hueg', 'Swiss']; 
+watches.forEach((watch, index, arr) => console.log(`${index} - ${watch}`, arr))
+
+
+
+// .map method - map() is a method that iterates through an array and can returns a new array
+// .map method - map() method creates a new array with the results of calling a function on every element in the calling array
+const shade = ['red', 'green', 'blue', 'yellow', 'black'];
+//const shades = shade.map((color) => color.toUpperCase());
+//console.log(shades);
+
+shade.map((color) => console.log(color.toUpperCase(color)));
