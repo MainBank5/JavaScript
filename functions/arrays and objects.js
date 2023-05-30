@@ -257,7 +257,7 @@ let jav;
 jav = person3.address.coord.lat;
 console.log(jav);
 
-//spread operator on objects 
+//merge objects using spread operator 
 
 const obj1 = {
      a: 1, 

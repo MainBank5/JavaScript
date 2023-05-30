@@ -677,5 +677,130 @@ console.log(retailCompanies);
 const range = companies.filter((company) => company.start >= 1980 && company.end <= 2005);
 console.log(range);
 
+//get companies that are 10 years and older
 const decadeCompanies = companies.filter((company) => company.end - company.start >= 10);
 console.log(decadeCompanies);
+
+// .map method 
+const frontEnd = ['JavaScript','Python', 'Ruby', 'Assembly'];
+const changeCase = frontEnd.map((language) => language.toLowerCase(language));
+console.log(changeCase);
+
+//multiplication
+
+const interger = [2, 3, 4, 5, 6, 7];
+const fiveMultiples = interger.map((num) => num * 5);
+console.log(fiveMultiples);
+
+//more example 
+
+const companyNames = companies.map((company) => company.name);
+console.log(companyNames);
+
+//create an array 
+const companiesArray = companies.map((company) => { return {
+     name: company.name,
+    category: company.category,
+}    
+}
+)
+console.log(companiesArray)
+
+//return an array of objects with the company name and length of each company in years
+const companiesLength = companies.map((company) => { return {
+    name: company.name,
+    length: company.end - company.start,
+    }
+    }
+)
+
+console.log(companiesLength);
+
+//chaining methods
+// the subsequent method takes/works with the results of the previous method
+const numberK = [2, 3, 4, 5, 6, 8, 10, 12, 13, 14, 15, 16];
+const evenDouble = numberK
+.filter((num) => num % 2 === 0)
+.map((even) => even * 2);
+
+
+console.log(evenDouble)
+
+// .reduce method 
+//array.reduce(function(total/accumulator, currentValue, currentIndex, arr), initialValue)
+
+const numba = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+/*const sum = numba.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);*/
+
+//shorthand of the same 
+const sum = numba.reduce((acc, cur) => acc + cur, 0);
+console.log(sum);
+
+//cart example 
+//use reduce to get the total price 
+const cart = [
+    { id: 1, name: 'Product 1', price: 130},
+    { id: 2, name: 'Product 2', price: 150},
+    { id: 3, name: 'Product 3', price: 175},
+]
+
+const totalPrice = cart.reduce((acc, product) => acc + product.price, 0);
+console.log(totalPrice);
+
+//challenge
+//Take the `people` array and create an array called `youngPeople` that stores objects with ONLY `name` and
+// `email` properties of all the people that are 25 and under. The `name` property should have their 
+//first and last name.
+const people = [
+    {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'john@gmail.com',
+      phone: '111-111-1111',
+      age: 30,
+    },
+    {
+      firstName: 'Jane',
+      lastName: 'Poe',
+      email: 'jane@gmail.com',
+      phone: '222-222-2222',
+      age: 25,
+    },
+    {
+      firstName: 'Bob',
+      lastName: 'Foe',
+      email: 'bob@gmail.com',
+      phone: '333-333-3333',
+      age: 45,
+    },
+    {
+      firstName: 'Sara',
+      lastName: 'Soe',
+      email: 'Sara@gmail.com',
+      phone: '444-444-4444',
+      age: 19,
+    },
+    {
+      firstName: 'Jose',
+      lastName: 'Koe',
+      email: 'jose@gmail.com',
+      phone: '555-555-5555',
+      age: 23,
+    },
+  ];
+
+const youngPeople = people
+.filter((person) => person.age <= 25)
+.map((person) => { return {
+    name: `${person.firstName} ${person.lastName}`,
+    email: person.email
+}})
+
+console.log(youngPeople);
+
+//challenge 2 
+//Add all of the positive numbers in the array.
+const numberi = [2, -30, 50, 20, -12, -9, 7];
+const positiveNumbers = numberi.filter((num))
