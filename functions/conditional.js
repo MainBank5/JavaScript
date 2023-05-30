@@ -683,7 +683,7 @@ console.log(decadeCompanies);
 
 // .map method 
 const frontEnd = ['JavaScript','Python', 'Ruby', 'Assembly'];
-const changeCase = frontEnd.map((language) => language.toLowerCase(language));
+const changeCase = frontEnd.map((language) => language.toUpperCase(language));
 console.log(changeCase);
 
 //multiplication
@@ -803,4 +803,8 @@ console.log(youngPeople);
 //challenge 2 
 //Add all of the positive numbers in the array.
 const numberi = [2, -30, 50, 20, -12, -9, 7];
-const positiveNumbers = numberi.filter((num))
+const positiveNumbers = numberi
+.filter((num) => num > 0)
+.reduce((acc, curr) => acc + curr, 0);
+
+console.log(positiveNumbers)
