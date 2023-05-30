@@ -573,7 +573,7 @@ for (const animal of animals) {console.log(animal.name);
 
 //loop over a string 
 let syntax = 'JavaScript'; 
-for (letter of syntax) {
+for ( letter of syntax) {
     console.log(letter)
 }
 
@@ -611,15 +611,71 @@ const style = ['old', 'new', 'modern', 'ancient'];
 style.forEach((styles) => console.log(styles));
 //the complete syntax for this foreach method is 
 //array.forEach(function(currentValue, index, arr))
+//nb- the index and arr are aoptional
 const watches = ['Rolex', 'Patek', 'hueg', 'Swiss']; 
 watches.forEach((watch, index, arr) => console.log(`${index} - ${watch}`, arr))
+//you can also define your function outside then call it in the method 
+const homwrk = [4, 5, 8, 9];
 
+function answers(num) {
+    console.log(num * 2) 
+}
 
+homwrk.forEach(answers)
 
 // .map method - map() is a method that iterates through an array and can returns a new array
+//if you store it in a const variable it creates a new array, but if you keep it as single function it iterates items 
 // .map method - map() method creates a new array with the results of calling a function on every element in the calling array
 const shade = ['red', 'green', 'blue', 'yellow', 'black'];
 //const shades = shade.map((color) => color.toUpperCase());
 //console.log(shades);
 
 shade.map((color) => console.log(color.toUpperCase(color)));
+
+//array with objects 
+const socialObjs = [
+    {name: 'Twitter' , url: 'https://twitter.com'},
+    {name: 'Facebook' , url: 'https://facebook.com'},
+    {name: 'Instagram' , url: 'https://instagram.com'},
+    {name: 'LinkedIn' , url: 'https://linkendIn.com'},
+];
+
+socialObjs.forEach((item) => (console.log(item.url)));
+
+
+// .filter method - filter() is a method that iterates through an array returns a new array
+// .filter method - filter() method creates a new array with the results of calling a function on every element in the calling array
+const mixedNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; 
+const evenNumbers = mixedNumbers.filter(function(num) {
+    return num % 2 === 0;
+});
+
+console.log(evenNumbers);
+
+const oddNumbers = mixedNumbers.filter((num) => num % 2 !== 0);
+console.log(oddNumbers);
+
+const companies = [
+    { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
+    { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
+    { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
+    { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
+    { name: 'Company Five', category: 'Technology', start: 2009, end:
+    2014},
+    { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
+    { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996},
+    { name: 'Company Eight', category: 'Technology', start: 2011, end:
+    2016},
+    { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989},
+];
+
+//get only retail companies using filter method 
+const retailCompanies = companies.filter((company) => company.category === 'Retail');
+console.log(retailCompanies);
+
+//get companies that started in or after 1980 and ended in or before 2005 
+const range = companies.filter((company) => company.start >= 1980 && company.end <= 2005);
+console.log(range);
+
+const decadeCompanies = companies.filter((company) => company.end - company.start >= 10);
+console.log(decadeCompanies);
