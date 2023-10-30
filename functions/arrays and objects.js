@@ -151,8 +151,9 @@ let get = testing.toString();
 console.log(get);
 //static methods on array object
 g = Array.isArray(testing);
-g = Array.isArray('Hello');
+let hg = Array.isArray('Hello');
 console.log(g);
+console.log(hg);
 
 //convert to array 
 

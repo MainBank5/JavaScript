@@ -357,10 +357,10 @@ let kite;
 kite = 5 ?? 6;
 console.log(kite);
 
-let cat = null ?? 20;
+let cat = null ?? 30;
 console.log(cat);
 
-//ternafy ioperator 
+//ternary ioperator 
 
 const age = 14;
 
@@ -391,9 +391,9 @@ let redirect;
 console.log(redirect);*/
 
 //shorthand 
-//const redirect2 = auth ? (alert("Welcome to your dashboard"), '/dashboard') : (alert('acccess denied'), '/login');
+const redirect2 = auth ? (alert("Welcome to your dashboard"), '/dashboard') : (alert('acccess denied'), '/login');
 
-//console.log(redirect2)
+console.log(redirect2)
 
 
 //if you only have one condition hence no need for else you can end with null 
@@ -660,12 +660,10 @@ const companies = [
     { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
     { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
     { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
-    { name: 'Company Five', category: 'Technology', start: 2009, end:
-    2014},
+    { name: 'Company Five', category: 'Technology', start: 2009, end:2014},
     { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
     { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996},
-    { name: 'Company Eight', category: 'Technology', start: 2011, end:
-    2016},
+    { name: 'Company Eight', category: 'Technology', start: 2011, end:2016},
     { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989},
 ];
 
